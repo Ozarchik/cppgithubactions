@@ -2,7 +2,7 @@ FROM ubuntu:latest AS build
 
 WORKDIR /app
 
-RUN sudo apt update && sudo apt install -y build-essential
+RUN sudo apt-get update && sudo apt-get install -y build-essential
 
 COPY main.cpp .
 
