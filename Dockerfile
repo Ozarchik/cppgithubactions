@@ -6,10 +6,10 @@ RUN apt-get update && apt-get install -y build-essential
 
 COPY main.cpp .
 
-RUN g++ -o build/hello main.cpp -static
+RUN g++ -o hello main.cpp -static
 
 FROM scratch
 
-COPY --from=build /app/build/hello /hello
+COPY --from=build /app/hello /hello
 
 RUN ["/hello"]
