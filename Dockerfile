@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN sudo apt update && sudo apt install -y build-essential
 
-COPY hello.cpp .
+COPY main.cpp .
 
 RUN g++ -o build/hello main.cpp -static
 
