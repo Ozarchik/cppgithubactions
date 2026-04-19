@@ -12,4 +12,4 @@ FROM scratch
 
 COPY --from=build /app/build/hello /hello
 
-EXPOSE ["/hello"]
+RUN ["/hello"]
